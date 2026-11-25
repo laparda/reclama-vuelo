@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Transavia: compensación por overbooking (denegación de embarque)</title><meta name="description" content="Si te impidieron embarcar contra tu voluntad por exceso de reservas, tienes derecho a compensación de 250 a 600 € por pasajero, además de reembolso o trans"><link rel="stylesheet" href="style.css"></head><body data-air="Transavia" data-tipo="den"><main><h1>Transavia: compensación por overbooking (denegación de embarque)</h1><p class="sub">Si te impidieron embarcar contra tu voluntad por exceso de reservas, tienes derecho a compensación de 250 a 600 € por pasajero, además de reembolso o transporte alternativo y asistencia.</p><div class="card">
+<h2>1. Tu vuelo</h2>
+<label for="tipo">¿Qué pasó?</label>
+<select id="tipo">
+<option value="ret">Llegué con retraso</option>
+<option value="can">Cancelaron mi vuelo</option>
+<option value="den">Me denegaron el embarque (overbooking)</option>
+</select>
+<div id="bRet">
+<label for="hrs">Horas de retraso al llegar al destino final</label>
+<input type="number" id="hrs" inputmode="decimal" step="0.25" placeholder="Ej. 3.5">
+</div>
+<div id="bCan" class="hid">
+<label for="aviso">¿Con cuántos días de antelación te avisaron?</label>
+<input type="number" id="aviso" inputmode="numeric" placeholder="Ej. 5">
+</div>
+<label for="km">Distancia aproximada del vuelo (km)</label>
+<input type="number" id="km" inputmode="numeric" placeholder="Ej. 1200">
+<label class="chk"><input type="checkbox" id="ue"> El origen y el destino están dentro de la UE</label>
+<label class="chk"><input type="checkbox" id="elig" checked> Salía de un aeropuerto de la UE, o llegaba a la UE con aerolínea europea</label>
+<label class="chk"><input type="checkbox" id="ext"> La aerolínea alega circunstancia extraordinaria (clima extremo, huelga de control aéreo…)</label>
+<button id="go" type="button">Calcular compensación</button>
+</div>
+
+<div id="res" class="card hid" aria-live="polite">
+<div class="big" id="amt"></div>
+<div id="why"></div>
+<button id="toLetter" type="button" class="hid">Generar mi carta de reclamación</button>
+</div>
+
+<div id="letterCard" class="card hid">
+<h2>2. Tu carta</h2>
+<label for="nom">Tu nombre completo</label><input id="nom" autocomplete="name">
+<label for="air">Aerolínea</label><input id="air" placeholder="Ej. Ryanair">
+<label for="vue">Número de vuelo</label><input id="vue" placeholder="Ej. FR1234">
+<label for="fec">Fecha del vuelo</label><input id="fec" type="date">
+<label for="rut">Ruta</label><input id="rut" placeholder="Ej. Madrid – Roma">
+<label for="res2">Código de reserva</label><input id="res2">
+<label for="iban">IBAN para el pago</label><input id="iban" autocomplete="off">
+<button id="mk" type="button">Crear carta</button>
+<label for="txt" style="margin-top:16px">Carta lista para copiar</label>
+<textarea id="txt"></textarea>
+<button id="cp" type="button">Copiar carta</button>
+<small>Envíala por el formulario de reclamaciones de la aerolínea o por correo, y guarda el justificante. Si no responde, puedes acudir a AESA (organismo nacional competente) o a la vía judicial.</small>
+</div>
+
+<div class="note">Herramienta orientativa basada en el Reglamento (CE) 261/2004, que sigue siendo la norma aplicable. El Reglamento (UE) 2026/2202 que lo modifica no se aplicará hasta el 23 de octubre de 2027. No es asesoramiento jurídico y el resultado final depende de las circunstancias de cada caso.</div>
+<div class="card"><b>Más información</b><nav><a href="retraso.html">Retraso de vuelo</a><a href="cancelacion.html">Cancelación de vuelo</a><a href="overbooking.html">Overbooking (denegación de embarque)</a></nav><nav><a href="ryanair.html">Ryanair</a><a href="vueling.html">Vueling</a><a href="iberia.html">Iberia</a><a href="iberia-express.html">Iberia Express</a><a href="air-europa.html">Air Europa</a><a href="easyjet.html">easyJet</a><a href="volotea.html">Volotea</a><a href="binter.html">Binter</a><a href="wizz-air.html">Wizz Air</a><a href="transavia.html">Transavia</a><a href="tap-air-portugal.html">TAP Air Portugal</a><a href="lufthansa.html">Lufthansa</a><a href="air-france.html">Air France</a><a href="klm.html">KLM</a><a href="british-airways.html">British Airways</a><a href="norwegian.html">Norwegian</a><a href="ita-airways.html">ITA Airways</a></nav><p><small>Compensación según el Reglamento (CE) 261/2004. Los plazos de reclamación varían según el país; en España suele ser de 5 años, pero consulta siempre la norma aplicable.</small></p></div></main><script src="app.js"></script></body></html>

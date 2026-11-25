@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://laparda.github.io/reclama-vuelo/sitemap.xml
